@@ -28,11 +28,12 @@ export default function ProductCard({product}) {
 		  md: '5',
 		})}
 	  >
-		<Box position="relative" bgColor={useColorModeValue('gray.50','gray.100')} rounded={'10px'}>
+		<Box position="relative" bgColor='gray.200' rounded={'10px'}>
 		  <AspectRatio ratio={4 / 5}>
 			<Image
 			  src={img}
 			  alt={name}
+			  
 			  draggable="false"
 			  fallback={<Skeleton />}
 			  borderRadius={useBreakpointValue({

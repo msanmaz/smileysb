@@ -16,7 +16,7 @@ module.exports = {
         'products': "url('/blackcat.jpeg')",
         'productsbg': "url('/productsbg.jpeg')",
         'razor1': "url('/category1.jpeg')",
-        'shave': "url('/waxcat.jpeg')",
+        'shave': "url('/bandidowaxwp.jpg')",
         'trimmer': "url('/beardtrimmer.jpeg')",
 
       }),

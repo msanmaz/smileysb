@@ -23,9 +23,7 @@ SwiperCore.use([Navigation]);
 
 
 export default function Home({products}) {
-  const router = useRouter()
-	const { pid } = router.query
-	console.log({pid})  
+ 
   const [currentCategory, setCurrentCategory] = React.useState('all')
 
   const swiperRef = React.useRef(null)
@@ -42,7 +40,7 @@ export default function Home({products}) {
 
     // here we return any product who's categories include one with the slug equaling the value of 'currentCategory'
     return products.filter(p => p.brand === 'Bandido')
-  }, [products])
+  }, [products,currentCategory])
 
   const diffCat = useMemo(() => {
     // if there aren't any products return an empty array, which in the rendering function will turn into 0 product divs
@@ -54,7 +52,7 @@ export default function Home({products}) {
 
     // here we return any product who's categories include one with the slug equaling the value of 'currentCategory'
     return products.filter(p => p)
-  }, [products])
+  }, [products,currentCategory])
 
   return (
     <Container maxW={'full'} px={'auto'}>
@@ -62,18 +60,18 @@ export default function Home({products}) {
       
       <Hero/>
       
-      <Flex px={{base:4, md:'10rem'}} py={{base:5,md:10}} alignItems={'center'} justifyContent={'space-between'} >
+      <Flex px={{base:4, md:'10rem'}} pt={{base:'4rem',md:'5rem'}} alignItems={'center'} justifyContent={'space-between'} >
         <Stack >
-          <Image src='/andis.jpeg'/>
+          <Image w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}} src='/andis.jpeg'/>
         </Stack>
         <Stack >
-          <Image w={'7rem'} h={'7rem'} src='/Arkoamblem.png'/>
+          <Image w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}}  src='/Arkoamblem.png'/>
         </Stack>
         <Stack >
-          <Image w={'7rem'} h={'7rem'} src="/Bandidohh_2-removebg-preview.png"/>
+          <Image w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}}  src="/Bandidohh_2-removebg-preview.png"/>
         </Stack>
         <Stack >
-          <Image  w={'7rem'} h={'5rem'} src='/wahllogo.png'/>
+          <Image  w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}}  src='/wahllogo.png'/>
         </Stack>
       </Flex>
 

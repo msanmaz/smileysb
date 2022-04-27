@@ -64,11 +64,11 @@ function Hero() {
                                         <div className='py-2 sm:py-4 md:py-8'>
                                             <div className='w-full' style={{ maxWidth: '460px' }}>
                                                 <h2 className='heading text-m sm:text-l md:text-[2rem] text-white'>
-                                                    TEE'S WE'RE OBSESSED WITH
+                                                    Smileys Barber Supplies
                                                 </h2>
                                                 <div className='flex items-end'>
                                                     <p className='text-sm text-gray-300 inline pr-1'>
-                                                        <span>Shop our curated edit of tees we can't get enough of. New drops daily. </span>
+                                                        <span>Shop our curated edit of product we can&apos;t get enough of. New drops daily. </span>
                                                     </p>
                                                 </div>
 

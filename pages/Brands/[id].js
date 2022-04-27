@@ -27,7 +27,7 @@ import { useRouter } from 'next/router'
 // Main Component
 
 
-const categories = [{name:'All'},{name:'Conditioner'}, {name:'Hair Gel'},{name:'Hair Spray'},{name:'Hair Wax'},{name:'Pomade Wax'},{name:'Shampoo'}]
+const categories = [{name:'All'},{name:'Arko'}, {name:'Barbicide'},{name:'Bandido'},{name:'Wahl'}]
 
 const Brand = ({ products }) => {
 	const router = useRouter()
@@ -36,10 +36,9 @@ const Brand = ({ products }) => {
         if(router.isReady){
             const { id } = router.query;
             if (id) return setCurrentCategory(id);
-            console.log(id)
          }
         
-    }, [router.isReady]);
+    }, []);
    
     const prod = products.filter(p=> p)
 
@@ -173,7 +172,7 @@ const Brand = ({ products }) => {
 						py={4}
 						align={'center'}
 						justify={'center'}>
-						{ <Select onClick={handleDrop} bgColor={'teal.500'}>
+						{ <Select onClick={handleDrop} bgColor={'black'} color='white'>
 							{categories.map(({ index, name }) => (
 								<option id={index} key={index} value={name}>{name}</option>
 

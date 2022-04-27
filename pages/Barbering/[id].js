@@ -27,22 +27,24 @@ import { useRouter } from 'next/router'
 // Main Component
 
 
-const categories = [{name:'All'},{name:'Conditioner'}, {name:'Hair Gel'},{name:'Hair Spray'},{name:'Hair Wax'},{name:'Pomade Wax'},{name:'Shampoo'}]
+const categories = [{name:'All Barbering'},{name:'Electrical'}, {name:'Scissors'},{name:'Aprons'},{name:'Hygiene'}]
 
-const ProductPage = ({ products }) => {
+const Brand = ({ products }) => {
 	const router = useRouter()
+    
     useEffect(() => {
         if(router.isReady){
             const { id } = router.query;
             if (id) return setCurrentCategory(id);
          }
+        
     }, []);
    
-    const prod = products.filter(p=> p.type ==='haircare')
+    const prod = products.filter(p=> p)
 
 	const [isLargerThan680] = useMediaQuery('(min-width: 680px)')
 
-	const [currentCategory, setCurrentCategory] = useState('All')
+	const [currentCategory, setCurrentCategory] = useState('')
 
 	const { colorMode, toggleColorMode } = useColorMode();
 
@@ -54,7 +56,7 @@ const ProductPage = ({ products }) => {
 
 		// if currentCategory is not set (if you forgot default value for example) return all products
 		// also if currentCategory is 'all' skip filtering the products because we obviously return all of them
-		if (currentCategory === 'All') return prod
+		if (currentCategory === 'All Barbering') return prod.filter(p=>p.type === 'barbering')
 
 
 		// here we return any product who's categories include one with the slug equaling the value of 'currentCategory'
@@ -170,9 +172,9 @@ const ProductPage = ({ products }) => {
 						py={4}
 						align={'center'}
 						justify={'center'}>
-						{ <Select onClick={handleDrop} bgColor={'gray.500'} color='white' colorScheme='gray'>
+						{ <Select onClick={handleDrop} bgColor={'black'} color='white'>
 							{categories.map(({ index, name }) => (
-								<option id={index} key={index} className='text-black' value={name}>{name}</option>
+								<option id={index} key={index} value={name}>{name}</option>
 
 							))}
 						</Select>}
@@ -208,7 +210,7 @@ const ProductPage = ({ products }) => {
 	)
 }
 
-export default ProductPage
+export default Brand
 
 // Static
 
