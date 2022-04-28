@@ -31,7 +31,7 @@ export default function Navbar() {
         </Link>
 
 
-        <Box px={{base:'5rem',md:'3rem'}}>
+        <Box px={{base:'3.7rem',md:'3rem'}}>
         {colorMode === 'light' ? <IconButton aria-label='Change Dark' bgColor={'transparent'} color='white' _hover={{bgColor:'gray.700'}}  onClick={toggleColorMode} icon={<MoonIcon />} />
                             : <IconButton aria-label='Change Light' bgColor={'transparent'} onClick={toggleColorMode} icon={<SunIcon />} />
                         }
