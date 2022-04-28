@@ -62,16 +62,16 @@ export default function Home({products}) {
       
       <Flex px={{base:4, md:'10rem'}} pt={{base:'4rem',md:'5rem'}} alignItems={'center'} justifyContent={'space-between'} >
         <Stack >
-          <Image w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}} src='/andis.jpeg'/>
+          <Image w={{base:'4rem', md:'5rem'}} rounded={'2xl'}  h={{base:'4rem', md:'5rem'}} src='/andis.jpeg'/>
         </Stack>
         <Stack >
-          <Image w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}}  src='/Arkoamblem.png'/>
+          <Image w={{base:'4rem', md:'5rem'}} rounded={'2xl'}  h={{base:'4rem', md:'5rem'}}  src='/Arkoamblem.png'/>
         </Stack>
         <Stack >
-          <Image w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}}  src="/Bandidohh_2-removebg-preview.png"/>
+          <Image w={{base:'4rem', md:'5rem'}} bgColor='white' rounded={'2xl'} h={{base:'4rem', md:'5rem'}}  src="/Bandidohh_2-removebg-preview.png"/>
         </Stack>
         <Stack >
-          <Image  w={{base:'4rem', md:'5rem'}}  h={{base:'4rem', md:'5rem'}}  src='/wahllogo.png'/>
+          <Image  w={{base:'4rem', md:'5rem'}}  bgColor='white' rounded={'2xl'} h={{base:'4rem', md:'5rem'}}  src='/wahllogo.png'/>
         </Stack>
       </Flex>
 

@@ -21,12 +21,11 @@ const styles = {
 }
 
 const config = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: true,
 }
 
 const theme = extendTheme({
-
   breakpoints,
   config,
   styles

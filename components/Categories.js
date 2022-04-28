@@ -102,7 +102,7 @@ export default function Categories() {
 
                             <Link href="/barbering/electrical">
                                 <div className="bg-trimmer catcat bg-cover bg-center flex relative w-full rounded-lg">
-                                    <div clasName="absolute rounded-lg bottom-0 mt-20 right-0 top-1 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
+                                    <div className="absolute rounded-lg bottom-0 mt-20 right-0 top-1 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
                                     <div className="absolute bottom-1 left-0 mx-5 mt-2 flex justify-between items-center">
                                         <a href="#" className="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">Discover Our Latest Electrical Shaving Products
     </a>

@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import {useColorMode} from '@chakra-ui/react'
 
 function Footer() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <footer>
       <div className="mx-auto px-4 sm:px-6 mt-10">
@@ -13,7 +16,7 @@ function Footer() {
             <div className="mb-2">
               {/* Logo */}
               <Link href="/">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 animate fill-current text-black" version="1.2" viewBox="0 0 375 375">
+              <svg xmlns="http://www.w3.org/2000/svg" className={`w-20 h-20 animate fill-current ${colorMode === "dark" ? "text-white" : "text-gray-700"}`} version="1.2" viewBox="0 0 375 375">
                             <defs />
                             <defs>
                                 <symbol id="a" overflow="visible">
@@ -101,17 +104,17 @@ function Footer() {
 
           {/* 3rd block */}
           <div className="sm:col-span-6  md:col-span-3 lg:col-span-2">
-            <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Products:</h6>
+            <h6 className={`font-medium mb-2 ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Products:</h6>
             <ul className="text-sm">
 
               <li className="mb-2">
-                <Link href="/brands/Arko"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Arko</p></Link>
+                <Link href="/brands/Arko"><p className={`cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Arko</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/brands/Barbicide"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Barbicide</p></Link>
+                <Link href="/brands/Barbicide"><p className={`cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Barbicide</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/brands/Bandido"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Bandido</p></Link>
+                <Link href="/brands/Bandido"><p className={`cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Bandido</p></Link>
               </li>
 
 
@@ -123,22 +126,22 @@ function Footer() {
             <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Menu</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link href="/" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Home Page</p></Link>
+                <Link href="/" ><p className={`cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Home Page</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/products" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Products</p></Link>
+                <Link href="/products" ><p className={`cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Products</p></Link>
               </li>
 
               <li className="mb-2">
-                <Link href="/contact"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Contact Us</p></Link>
+                <Link href="/contact"><p className={`cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Contact Us</p></Link>
               </li>
             </ul>
           </div>
 
           {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
-            <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Subscribe to our Newsletter</h6>
-            <p className="text-sm text-gray-600 mb-4 dark:text-white">For Following our latest products and discounts!</p>
+            <h6 className={`cursor-pointer font-medium mb-2 ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>Subscribe to our Newsletter</h6>
+            <p className={`cursor-pointer text-sm mb-4 hover:text-gray-900 transition duration-150 ease-in-out ${colorMode === "dark" ? "text-white" : "text-gray-700"}`}>For Following our latest products and discounts!</p>
             <form>
               <div className="flex flex-wrap mb-4">
                 <div className="w-full">
@@ -190,7 +193,7 @@ function Footer() {
           </ul>
 
           {/* Copyrights note */}
-          <div className="text-sm text-gray-600 mr-4 dark:text-white">&copy; 2020 Osanmaz Bütün Hakları Saklıdır.</div>
+          <div className="text-sm text-gray-600 mr-4 dark:text-white">&copy; 2020 Osanmaz All Rights Reserved.</div>
 
         </div>
 
